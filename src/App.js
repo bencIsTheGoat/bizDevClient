@@ -1,45 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import { VictoryPie } from 'victory'
-
+import { Select, MenuItem } from '@material-ui/core';
 
 
 function App() {
 
-  const [pie, setPie] = useState([]);
+  // filters
+  const [month, setMonth] = useState('january');
+  const [year, setYear] = useState('2020');
+  const [state, setState] = useState('nj');
+  const [stateData, setStateData] = useState({});
 
   useEffect(() => {
+
     const getData = async () => {
       try {
-        const res = await fetch("http://localhost:3001/data?states=nj")
-        const { 
-          nj = []
-        } = await res.json();
-
-        const operators = nj[0].onlineRevTable[0].slice(1);
-        const rev = nj[0].onlineRevTable[2].slice(1);
-        
-        setPie(operators.map((op, idx) => {
-          return {
-            x: op,
-            y: rev[idx]
-          }
-        }))
+        const res = await fetch(`http://localhost:3001/data?states=${state}`)
+        const data = await res.json();
+        setStateData({
+          ...stateData,
+          [state]: data[state]
+        });
       } catch (e) {
         console.log(e)
       }
     }
 
     getData()
-    // const data = getData();
-    // console.log(data)
-  }, [])
+  }, [state]);
+
+  const filterView = () => {
+    return [state, month, year].map(ele => {
+      return (
+        <Select>
+          
+        </Select>
+      )
+    })
+  }
+
+
   return (
     <div>
-      <VictoryPie
-        data={pie}
-        animate={true}
-        colorScale="qualitative"
-      />
+      {
+        filterView()
+      }
     </div>
   );
 }
