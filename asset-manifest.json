@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/bizDevClient/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/bizDevClient/static/js/main.2dab73ec.chunk.js",
+    "main.js.map": "/bizDevClient/static/js/main.2dab73ec.chunk.js.map",
+    "runtime-main.js": "/bizDevClient/static/js/runtime-main.c6ce1129.js",
+    "runtime-main.js.map": "/bizDevClient/static/js/runtime-main.c6ce1129.js.map",
+    "static/js/2.c3001123.chunk.js": "/bizDevClient/static/js/2.c3001123.chunk.js",
+    "static/js/2.c3001123.chunk.js.map": "/bizDevClient/static/js/2.c3001123.chunk.js.map",
+    "index.html": "/bizDevClient/index.html",
+    "precache-manifest.3c43e6df546f259592f8650b483c13e2.js": "/bizDevClient/precache-manifest.3c43e6df546f259592f8650b483c13e2.js",
+    "service-worker.js": "/bizDevClient/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/bizDevClient/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.c3001123.chunk.js.LICENSE.txt": "/bizDevClient/static/js/2.c3001123.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c6ce1129.js",
+    "static/js/2.c3001123.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.2dab73ec.chunk.js"
+  ]
+}
